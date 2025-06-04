@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhwkwq5skjgd8"]
+
+[ext_resource type="PackedScene" uid="uid://fjgvetokytsx" path="res://retro_house_pack/retro_house_pack/models/fbx/PSX_First_Person_Arms/Notepad_LP.fbx" id="1_wn01w"]
+[ext_resource type="Texture2D" uid="uid://dyp715w0du4m3" path="res://retro_house_pack/retro_house_pack/models/fbx/PSX_First_Person_Arms/Notepad_Color.png" id="2_lyp5m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eo7dk"]
+albedo_texture = ExtResource("2_lyp5m")
+
+[node name="Notepad_LP" instance=ExtResource("1_wn01w")]
+transform = Transform3D(1, 0, 0, 0, 0.617695, -0.786418, 0, 0.786418, 0.617695, 0, 0, 0)
+
+[node name="Notepad_LP" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_eo7dk")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://m4er40raps2e"]
+
+[ext_resource type="PackedScene" uid="uid://rvlatv8mmpt5" path="res://retro_house_pack/retro_house_pack/models/fbx/house3.fbx" id="1_87kxw"]
+[ext_resource type="Texture2D" uid="uid://dmjjy2otpyrkm" path="res://retro_house_pack/retro_house_pack/textures/512x512/house3_tex1.png" id="2_kh6nv"]
+[ext_resource type="Texture2D" uid="uid://cm0112n84w70t" path="res://retro_house_pack/retro_house_pack/textures/512x512/house3_tex3.png" id="3_43uw5"]
+[ext_resource type="Texture2D" uid="uid://bk2fqrabhpwpw" path="res://retro_house_pack/retro_house_pack/textures/512x512/house3_tex2.png" id="4_dpcxu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1ih5"]
+albedo_texture = ExtResource("2_kh6nv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qh5f"]
+albedo_texture = ExtResource("3_43uw5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bt5or"]
+albedo_texture = ExtResource("3_43uw5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pm1c"]
+albedo_texture = ExtResource("4_dpcxu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b18gk"]
+albedo_texture = ExtResource("3_43uw5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21iy4"]
+albedo_texture = ExtResource("3_43uw5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kh6nv"]
+size = Vector3(1.35797, 0.001, 3.51148)
+
+[node name="house3" instance=ExtResource("1_87kxw")]
+
+[node name="house3" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_g1ih5")
+
+[node name="house3_door1" parent="house3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, -4.30531, 2.9)
+visible = false
+material_override = SubResource("StandardMaterial3D_1qh5f")
+
+[node name="StaticBody3D" parent="house3/house3_door1" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="house3/house3_door1/StaticBody3D" index="0"]
+visible = false
+
+[node name="house3_door2" parent="house3" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, -59.3185, -0.0999999)
+visible = false
+material_override = SubResource("StandardMaterial3D_bt5or")
+
+[node name="house3_windows" parent="house3" index="2"]
+material_override = SubResource("StandardMaterial3D_7pm1c")
+
+[node name="house3_door4" parent="house3" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, -16.1303, -2.1)
+visible = false
+material_override = SubResource("StandardMaterial3D_b18gk")
+
+[node name="house3_door3" parent="house3" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, -11.5848, -1.5)
+visible = false
+material_override = SubResource("StandardMaterial3D_21iy4")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="house3/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.782608, -0.622515, 0, 0.622515, 0.782608, -1.27482, -0.0905064, 6.67546)
+shape = SubResource("BoxShape3D_kh6nv")

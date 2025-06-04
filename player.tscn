@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdk6hwb4hi2wc"]
+
+[ext_resource type="Script" uid="uid://c18euq2mhdh52" path="res://Player.cs" id="1_i3pqv"]
+[ext_resource type="Shader" uid="uid://c2c0ldk7fhq6b" path="res://nature/exports/trees/psx_camera/psx_camera_shader.gdshader" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://bvayvwmsekdkl" path="res://retro_house_pack/retro_house_pack/models/fbx/PSX_First_Person_Arms/PSX_First_Person_Arms.fbx" id="3_i3pqv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3rsb5"]
+radius = 0.193505
+height = 1.8
+
+[sub_resource type="QuadMesh" id="QuadMesh_onrkg"]
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3pqv"]
+render_priority = 0
+shader = ExtResource("2_onrkg")
+shader_parameter/enable_fog = true
+shader_parameter/fog_color = Color(0.111647, 0.00578563, 0.0110477, 1)
+shader_parameter/noise_color = Color(0, 0, 0, 1)
+shader_parameter/fog_distance = 20.0
+shader_parameter/fog_fade_range = 3.0
+shader_parameter/enable_noise = true
+shader_parameter/noise_time_fac = 4.0
+shader_parameter/enable_color_limitation = true
+shader_parameter/color_levels = 150
+shader_parameter/enable_dithering = true
+shader_parameter/dither_strength = 1.0
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_i3pqv")
+
+[node name="CShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.880953, 0)
+shape = SubResource("CapsuleShape3D_3rsb5")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59664, 0.099997)
+fov = 61.4902
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00992823, -0.0771029, -0.932368)
+mesh = SubResource("QuadMesh_onrkg")
+surface_material_override/0 = SubResource("ShaderMaterial_i3pqv")
+
+[node name="PSX_First_Person_Arms" parent="." instance=ExtResource("3_i3pqv")]
+transform = Transform3D(-0.994881, 0, -0.101056, 0, 1, 0, 0.101056, 0, -0.994881, 0.00566417, -0.235617, -0.0578232)

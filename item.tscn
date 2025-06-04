@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn8vnvck483dh"]
+
+[ext_resource type="PackedScene" uid="uid://fjgvetokytsx" path="res://retro_house_pack/retro_house_pack/models/fbx/PSX_First_Person_Arms/Notepad_LP.fbx" id="1_ttk8k"]
+[ext_resource type="Script" uid="uid://w732lkbd45hb" path="res://Item.cs" id="2_ys7tt"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ttk8k"]
+radius = 1.12916
+
+[node name="Item" type="Area3D"]
+script = ExtResource("2_ys7tt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Notepad_LP" parent="." instance=ExtResource("1_ttk8k")]
+transform = Transform3D(1, 0, 0, 0, 0.898794, -0.438371, 0, 0.438371, 0.898794, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00965357)
+shape = SubResource("SphereShape3D_ttk8k")

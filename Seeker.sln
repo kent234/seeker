@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seeker", "Seeker.csproj", "{DBD2B96B-EC1B-4AA2-B20B-3D96BFC2E4AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBD2B96B-EC1B-4AA2-B20B-3D96BFC2E4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD2B96B-EC1B-4AA2-B20B-3D96BFC2E4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD2B96B-EC1B-4AA2-B20B-3D96BFC2E4AA}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{DBD2B96B-EC1B-4AA2-B20B-3D96BFC2E4AA}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{DBD2B96B-EC1B-4AA2-B20B-3D96BFC2E4AA}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{DBD2B96B-EC1B-4AA2-B20B-3D96BFC2E4AA}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

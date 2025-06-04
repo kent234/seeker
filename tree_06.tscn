@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8gi0mf5hx5sj"]
+
+[ext_resource type="PackedScene" uid="uid://dj06h37oucf6y" path="res://retro_nature_pack/retro_nature_pack/models/FBX/trees/tree06.fbx" id="1_6f7j6"]
+[ext_resource type="Texture2D" uid="uid://mdrdqjam4wj5" path="res://retro_nature_pack/retro_nature_pack/textures/trees/tree06_fall.png" id="2_qf5fh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6f7j6"]
+albedo_texture = ExtResource("2_qf5fh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e67g"]
+albedo_texture = ExtResource("2_qf5fh")
+
+[node name="tree06" instance=ExtResource("1_6f7j6")]
+
+[node name="tree06" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_6f7j6")
+
+[node name="tree06_top" parent="tree06" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.76536, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_4e67g")
+
+[node name="StaticBody3D" parent="tree06/tree06_top" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="tree06/tree06_top/StaticBody3D" index="0"]
+visible = false
